@@ -1,0 +1,196 @@
+      /* ------------------------------
+   CONTAINER
+------------------------------ */
+      #deductionTool {
+        max-width: 1225px;
+        margin: 30px auto;
+        padding: 20px;
+        background: #fafafa;
+        border-radius: 12px;
+        border: 1px solid #ccc;
+        font-family: Arial, sans-serif;
+      }
+
+      /* ------------------------------
+   TABS
+------------------------------ */
+      .tabs {
+        display: flex;
+        margin-bottom: 15px;
+      }
+
+      .tab {
+        flex: 1;
+        padding: 12px;
+        cursor: pointer;
+        border: none;
+        background: #e6e6e6;
+        font-size: 17px;
+        border-radius: 12px 12px 0 0;
+        transition: 0.2s;
+      }
+
+      .tab.active {
+        background: #008427;
+        border-bottom: 2px solid #fff;
+        font-weight: bold;
+        color: white;
+      }
+
+      /* ------------------------------
+   TAB CONTENT
+------------------------------ */
+      .tab-content {
+        display: none;
+        padding: 15px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-top: none;
+        border-radius: 0 0 8px 8px;
+      }
+
+      .tab-content.active {
+        display: block;
+      }
+
+      /* ------------------------------
+   SEARCH BOXES
+------------------------------ */
+      input[type="text"] {
+        width: 90%;
+        padding: 12px;
+        font-size: 16px;
+        margin-bottom: 15px;
+        border-radius: 6px;
+        border: 1px solid #bbb;
+      }
+
+      /* ------------------------------
+   MATCH LIST
+------------------------------ */
+      .match-item {
+        padding: 10px;
+        background: #f7f7f7;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin-bottom: 4px;
+        cursor: pointer;
+        transition: 0.2s;
+      }
+
+      .match-item:hover {
+        background: #e9f3ff;
+      }
+
+      /* ------------------------------
+   RESULT CARDS
+------------------------------ */
+      .result-item {
+        padding: 12px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        margin-bottom: 4px;
+      }
+
+      #deductionTool li {
+        margin-bottom: 6px;
+      }
+
+      /* ------------------------------
+   PRINT BUTTON
+------------------------------ */
+      #printBtn {
+        margin-top: 20px;
+        padding: 12px 18px;
+        font-size: 16px;
+        background: #008427;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      #printBtn:hover {
+        background: #008429;
+      }
+
+      /* ------------------------------
+   CALCULATOR
+------------------------------ */
+      .calc-box {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .calc-box input {
+        padding: 8px;
+        font-size: 16px;
+      }
+
+      .calc-box button {
+        padding: 10px;
+        background: #ac0046;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      .calc-box button:hover {
+        background: #ac0046;
+      }
+
+      /* ------------------------------
+   DATE BOX
+------------------------------ */
+      input[type="date"] {
+        font-family: Arial, sans-serif;
+      }
+
+      /* ------------------------------
+   PRINT CLEANUP
+------------------------------ */
+      @media print {
+        #searchRates,
+        #searchDeductions,
+        .tabs,
+        #printBtn {
+          display: none !important;
+        }
+
+        body {
+          background: white;
+        }
+
+        .result-item {
+          page-break-inside: avoid;
+        }
+      }
+
+      /* Alternating row shading */
+      tbody tr:nth-child(odd) {
+        background-color: #f7f7f7;
+      }
+
+      tbody tr:nth-child(even) {
+        background-color: #ffffff;
+      }
+
+      /* Lighter grey borders */
+      table td,
+      table th {
+        border: 1px solid #e0e0e0;
+      }
+
+      /* Centre all table text */
+      table td,
+      table th {
+        text-align: center;
+      }
+
+      /* Wider Food & Drink columns */
+      .food-col {
+        width: 130px;
+      }
