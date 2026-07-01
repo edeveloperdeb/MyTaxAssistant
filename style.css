@@ -194,3 +194,23 @@
       .food-col {
         width: 130px;
       }
+
+      /* ------------------------------
+   BORROWING COSTS
+------------------------------ */
+      .solution-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.solution-table th,
+.solution-table td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
+
+.solution-table tr:nth-child(even) {
+  background: #f7f7f7;
+}

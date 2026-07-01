@@ -9886,6 +9886,75 @@ const rates = {
 // DATA STRUCTURE (Calculations aliases + items)
 // -------------------------------------------
 const calculations = {
+  "Adjusted Tax Free Threshold": {
+    aliases: [
+      "tax free",
+      "threshold",
+      "adjusted threshold",
+      "resident threshold",
+      "partial year",
+    ],
+    items: [
+      "To work out the <strong>Adjusted Tax-Free Threshold</strong>:<p>⭐Enter the number of months the taxpayer was in Australia</p><p>⭐Click <strong>Calculate</strong></p><p>The formula used is:<br><strong><br>  = $13,464 + ($4,736 × months in Australia / 12 months)</strong></p>",
+    ],
+    calculator: `
+        <div class="calc-box">
+
+            <label>Months in Australia (0–12):</label>
+            <input id="tftMonths" type="number" min="0" max="12">
+
+            <button onclick="calcAdjustedTFT()">Calculate</button>
+
+            <div id="tftResult"></div>
+        </div>
+    `,
+  },
+
+  "Borrowing Costs - Rental Property": {
+    aliases: [
+      "borrowing",
+      "loan fees",
+      "mortgage fees",
+      "lmi",
+      "borrowing costs",
+      "rental",
+    ],
+    items: [
+      "Calcualte the deductible amount of borrowing costs on a rental property. Allow for rounding differences.</p>⭐Enter each borrowing cost item</p><p>⭐Enter the loan start date</p><p>⭐Enter the loan term (years)</p><p>⭐Enter the work‑related use percentage</p><p>⭐Click <strong>Submit</strong> to calculate deductible amounts for each year</p></p>",
+    ],
+    calculator: `
+    <div class="calc-box">
+
+      <table class="bc-table">
+        <tr style="color: #ffffff; background: #008427; height: 50px;"><th>Description</th><th>Amount ($)</th></tr>
+        <tr><td>Solicitor’s fees</td><td><input id="bcSolicitor" type="number"></td></tr>
+        <tr><td>Loan establishment fee</td><td><input id="bcEstablishment" type="number"></td></tr>
+        <tr><td>Title search fees</td><td><input id="bcTitle" type="number"></td></tr>
+        <tr><td>Stamp duty on mortgage</td><td><input id="bcStamp" type="number"></td></tr>
+        <tr><td>Mortgage broker fees</td><td><input id="bcBroker" type="number"></td></tr>
+        <tr><td>Valuation fees</td><td><input id="bcValuation" type="number"></td></tr>
+        <tr><td>Lender’s mortgage insurance (LMI)</td><td><input id="bcLMI" type="number"></td></tr>
+        <tr><td>Other</td><td><input id="other" type="number"></td></tr>
+        <tr><td><strong>Total borrowing costs</strong></td><td><input id="bcTotal" type="number" readonly></td></tr>
+      </table>
+
+      <label>Loan Start Date:</label>
+      <input id="bcStartDate" type="date">
+
+      <label>Loan Term (years):</label>
+      <input id="bcTerm" type="number" min="1" max="30">
+
+      <label>Work Use Percentage (%):</label>
+      <input id="bcUsePct" type="number" min="0" max="100" placeholder="e.g. 100 or 81.34">
+
+      <button onclick="calcBorrowingCosts()">Submit</button>
+
+      <div id="bcResult"></div>
+      
+    </div>
+  `,
+  },
+
   "Days Between Dates": {
     aliases: ["days", "date difference", "between dates"],
     items: [
@@ -10131,6 +10200,149 @@ document
 /* ------------------------------
          CALCULATIONS
       ------------------------------ */
+/* ------------------------------
+         ADJUSTED TAX FREE THRESHOLD
+      ------------------------------ */
+function calcAdjustedTFT() {
+  const months = Number(document.getElementById("tftMonths").value);
+
+  if (isNaN(months) || months < 0 || months > 12) {
+    document.getElementById("tftResult").innerHTML =
+      "<p>Please enter a valid number between 0 and 12.</p>";
+    return;
+  }
+
+  const adjusted = 13464 + 4736 * (months / 12);
+
+  document.getElementById("tftResult").innerHTML = `
+        <p style="font-size: 20px"><strong> $${adjusted.toFixed(2)}</strong></p>
+        <p>Calculation: $13,464 + ($4,736 × ${months} months / 12 months)</p>
+    `;
+}
+
+/* ------------------------------
+         BORROWING COSTS CALCULATOR
+      ------------------------------ */
+function round2(value) {
+  // Round half up: 0–49 down, 50–99 up
+  return Math.round(value * 100) / 100;
+}
+
+function calcBorrowingCosts() {
+  const fields = [
+    "bcSolicitor",
+    "bcEstablishment",
+    "bcTitle",
+    "bcStamp",
+    "bcBroker",
+    "bcValuation",
+    "bcLMI",
+  ];
+
+  let total = 0;
+  fields.forEach((id) => {
+    const val = Number(document.getElementById(id).value);
+    if (!isNaN(val)) total += val;
+  });
+
+  document.getElementById("bcTotal").value = total.toFixed(2);
+
+  const startDate = document.getElementById("bcStartDate").value;
+  const termYears = Number(document.getElementById("bcTerm").value);
+  const usePct = Number(document.getElementById("bcUsePct").value) / 100;
+
+  if (!startDate || termYears <= 0 || isNaN(usePct)) {
+    document.getElementById("bcResult").innerHTML =
+      "<p>Please enter all required fields.</p>";
+    return;
+  }
+
+  // If ≤ $100 → full deduction in year 1
+  if (total <= 100) {
+    document.getElementById("bcResult").innerHTML = `
+      <p><strong>Total Deduction (Year 1):</strong> $${total.toFixed(2)}</p>
+      <p>Borrowing costs are ≤ $100, so the full amount is deductible in the first year.</p>
+    `;
+    return;
+  }
+
+  const start = new Date(startDate);
+
+  // Amortisation period = min(termYears, 5)
+  const amortYears = Math.min(termYears, 5);
+
+  // End date of amortisation period (5 years or loan term)
+  const amortEnd = new Date(start);
+  amortEnd.setFullYear(start.getFullYear() + amortYears);
+  amortEnd.setDate(amortEnd.getDate() - 2); // FIX: end date is inclusive
+
+  // Total amortisation days (include start date)
+  const totalDays = Math.ceil((amortEnd - start) / (1000 * 60 * 60 * 24)) + 1;
+
+  // Determine if we need a stub year (loan starts after 30 June)
+  const needsStubYear = start.getMonth() > 5; // July = month 6
+  const loopYears = needsStubYear ? amortYears + 1 : amortYears;
+
+  let rowsHTML = "";
+  let yearStart = new Date(start);
+
+  for (let year = 1; year <= loopYears; year++) {
+    let yearEnd;
+
+    // Final displayed year ends at amortisation end date
+    if (year === loopYears) {
+      yearEnd = new Date(amortEnd);
+    } else {
+      // End of financial year (30 June)
+      yearEnd = new Date(yearStart.getFullYear(), 5, 30);
+
+      // If loan starts after 30 June, move to next FY
+      if (yearStart > yearEnd) {
+        yearEnd = new Date(yearStart.getFullYear() + 1, 5, 30);
+      }
+    }
+
+    // Days in this year (include start date)
+    const daysInYear =
+      Math.ceil((yearEnd - yearStart) / (1000 * 60 * 60 * 24)) + 1;
+
+    // Raw calculations
+    const yearPortionRaw = total * (daysInYear / totalDays);
+    const deductibleRaw = yearPortionRaw * usePct;
+
+    // Rounded values (round half up)
+    const yearPortion = round2(yearPortionRaw);
+    const deductible = round2(deductibleRaw);
+
+    rowsHTML += `
+      <tr>
+        <td>${year}</td>
+        <td>${daysInYear}</td>
+        <td>$${yearPortion.toFixed(0)}</td>
+        <td>${(usePct * 100).toFixed(2)}%</td>
+        <td>$${deductible.toFixed(0)}</td>
+      </tr>
+    `;
+
+    // Next year starts the day after yearEnd
+    yearStart = new Date(yearEnd);
+    yearStart.setDate(yearStart.getDate() + 1);
+  }
+
+  document.getElementById("bcResult").innerHTML = `
+    <h4>Borrowing Costs Calculation</h4>
+    <table class="solution-table">
+      <tr style="background:#008427;color:#fff;text-align:center;">
+        <th>Year</th>
+        <th>Days in Year</th>
+        <th>Year Portion</th>
+        <th>Work Use %</th>
+        <th>Deductible Amount</th>
+      </tr>
+      ${rowsHTML}
+    </table>
+  `;
+}
 
 /* ------------------------------
          DAYS CALCULATION
