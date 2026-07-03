@@ -9275,6 +9275,46 @@ const rates = {
     ],
   },
 
+  "Low Income Tax Offset": {
+    aliases: ["Low Income Tax Offset", "LITO"],
+    items: [
+      `
+                  <div>
+                    <strong></strong>
+                    <table style="width:60%; border-collapse:collapse; font-size:15px; text-align:center;">
+                      <thead>
+                        <tr style="background:#008427; color:#ffffff; font-size:12px;">
+                          <th colspan="1" style="border:1px solid #e0e0e0; padding:8px;">Taxable Income</th>
+                          <th colspan="1" style="border:1px solid #e0e0e0; padding:8px;">LITO</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style="background:#ffffff;">
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Up to $37,500</td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">$700</td>
+                        </tr>
+
+                        <tr style="background:#ffffff;">
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">$37,501 to $45,000</td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">$700 less 5 cents for each dollar over $37,500</td>
+                        </tr>
+
+                        <tr style="background:#ffffff;">
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">$45,001 to $66,666</td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">$325 less 1.5 cents for each dollar over $45,000</td>
+                        </tr>
+
+                        <tr style="background:#ffffff;">
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">From $66,667</td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Nil</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                `,
+    ],
+  },
+
   "Medicare Levy": {
     aliases: [
       "Medicare",
@@ -9747,6 +9787,60 @@ const rates = {
                       </tbody>
                     </table>
                     <p style="font-size: 12px">*No repayments required if Medicare Levy reduced because of low family income.</p>
+                  </div>
+                `,
+    ],
+  },
+
+  "Summary of Vehicle Expenses Claim Methods": {
+    aliases: ["MV", "Summary", "Summary of Vehicle Expense Claim Methods"],
+    items: [
+      `
+                  <div>
+                    <strong></strong>
+                    <table style="width:60%; border-collapse:collapse; font-size:15px; text-align:center;">
+                      <thead>
+                        <tr style="background:#008427; color:#ffffff; font-size:12px;">
+                          <th colspan="1" style="border:1px solid #e0e0e0; padding:8px;">.</th>
+                          <th colspan="1" style="border:1px solid #e0e0e0; padding:8px;">Cents per km</th>
+                          <th colspan="1" style="border:1px solid #e0e0e0; padding:8px;">Logbook</th>
+                        <th colspan="1" style="border:1px solid #e0e0e0; padding:8px;">Actual Expenses</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr style="background:#ffffff;">
+                          <td style="background:#008427; color: #ffffff; border:1px solid #e0e0e0; padding:8px;"><strong>Eligibility<strong></td>
+                          <td colspan="2" style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Vehicle must be a 'car' owned or leased by the taxpayer</td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Vehicles other than cars and cars not owned or leased by the taxpayer. May be used for certain cars used in particular ways.</td>
+                        </tr>
+
+                        <tr style="background:#ffffff;">
+                          <td style="background:#008427; color: #ffffff; border:1px solid #e0e0e0; padding:8px;"><strong>Restrictions<strong></td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Limited to 5,000 km business use</td>
+                          <td colspan="2" style="border:1px solid #e0e0e0; padding:8px; color:#262626;">No upper or lower limit on business kms</td>
+                        </tr>
+
+                        <tr style="background:#ffffff;">
+                          <td style="background:#008427; color: #ffffff; border:1px solid #e0e0e0; padding:8px;"><strong>Basis of Calculation<strong></td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Estimate of business kms</td>
+                          <td colspan="2" style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Operating expenses for the financial year</td>
+                        </tr>
+
+                        <tr style="background:#ffffff;">
+                          <td style="background:#008427; color: #ffffff; border:1px solid #e0e0e0; padding:8px;"><strong>Formula<strong></td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Multiply business kms by rate</td>
+                          <td colspan="2" style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Multiply expenses by business use %</td>
+                        </tr>
+
+                        <tr style="background:#ffffff;">
+                          <td style="background:#008427; color: #ffffff; border:1px solid #e0e0e0; padding:8px;"><strong>Substantiation<strong></td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Reasonable estimate of kilometres</td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Logbook (current) and receipts. Fuel can be calculated</td>
+                          <td style="border:1px solid #e0e0e0; padding:8px; color:#262626;">Establishment of business % and receipts for all expenses (including fuel)</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
                   </div>
                 `,
     ],
