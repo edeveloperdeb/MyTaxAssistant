@@ -267,6 +267,17 @@ const BLOCKS = {
                       </ul>
                   </div>
           `,
+    archivist: `
+                  <div>
+                      <strong>Professional Fees, Association Fees, Licences, Professional Memberships & Union Fees</strong>
+                      <ul>
+                          <li><strong>Licences</strong> Heavy Vehicle Permits</li>
+                          <li><strong>Professional Fees</strong> Tax Agent Fees, Accountant Fees</li>
+                          <li><strong>Association / Profssional Membership Fees</strong> For Archivist and Record Managers: Australian Society of Archivists (ASA), Records and Information Management Pratitioners Alliance (RIMPA Global), For Curators and Museum Professionals: Australian Museums and Galleries Association (AMaGA) and International Council of Museums (ICOM Australia), Interdiscinplinary Associations: Art Association of Australia and New Zealand (AAANZ), and National Association for the Visual Arts (NAVA)</li>
+                          <li><strong>Union Fees</strong>Community and Public Sector Union (CPSU), </li>
+                      </ul>
+                  </div>
+          `,
     forestry: `
                   <div>
                       <strong>Professional Fees, Association Fees, Professional Memberships & Union Fees</strong>
@@ -369,6 +380,18 @@ const BLOCKS = {
               <ul>
                 <li><strong>Digital:</strong> Office 365, Adobe and Cloud Storage</li>
                 <li><strong>Technical Journals:</strong> Relating to field of work</li>
+                <li><strong>Reference Books:</strong> Relating to field of work</li>
+
+              </ul>
+            </div>
+          `,
+    archivist: `
+            <div>
+              <strong>Subscriptions</strong>
+              <ul>
+                <li><strong>Digital:</strong> Office 365, Adobe, Born Digital Forensics, File Processing & Ingest Software - Archivematica, DROID, and Siegfried, Email Processing Software - ePadd, Web Archiving - Archive-It and Cloud Storage</li>
+                <li><strong>Technical Journals - Archivists:</strong> The American Archivist, Australian Society of Archivists, Archives and Records  Association</li>
+                <li><strong>Technical Journals - Curators:</strong> Journal of Curatorial Studies, Curator: The Museum Journal</li>  
                 <li><strong>Reference Books:</strong> Relating to field of work</li>
 
               </ul>
@@ -494,6 +517,16 @@ const BLOCKS = {
               <ul>
                 <li><strong>Electronics: </strong> Computers, Laptops , Tablets, Printers, Scanners, Monitors, Keyboards, and Mouse</li>
                 <li><strong>General: </strong>Repairs, Stethoscope, USBs, Hard Drives, Specialised Gear Bag, and Pin Watches/Fob Watches</li>
+                <li><strong>Office Furniture: </strong>Desks, Standing Desks, Office Chairs, Bookcases, and Filing Cabinets</li>
+              </ul>
+            </div>
+          `,
+    archivist: `
+            <div>
+              <strong>Tools and Equipment</strong>
+              <ul>
+                <li><strong>Electronics: </strong> Computers, Laptops , Tablets, Cameras, Printers, Scanners, Monitors, Keyboards, and Mouse</li>
+                <li><strong>General: </strong>Repairs, USBs, Hard Drives, Magnifying Equipment, Conservation Brushes, Museum-grade HEPA Vacuum Cleaners, Bone Folders, Micro Spatulas, Weights and Custom Foam, Sandbag Supports, Digital hygrometers, Data Loggers, Dictaphones</li>
                 <li><strong>Office Furniture: </strong>Desks, Standing Desks, Office Chairs, Bookcases, and Filing Cabinets</li>
               </ul>
             </div>
@@ -9370,7 +9403,7 @@ const rates = {
                         <tr style="background:#008427; color:#ffffff; font-size:12px;">
                           <th colspan="1" style="border:1px solid #e0e0e0; padding:8px;">Year</th>
                           <th style="border:1px solid #e0e0e0; padding:8px;">Diesel / Petrol</th>
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Rate</th>
+                          <th style="border:1px solid #e0e0e0; padding:8px;">Electric</th>
                         </tr>
                       </thead>
                       <tbody>
