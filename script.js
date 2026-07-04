@@ -10047,7 +10047,7 @@ const calculations = {
       "rental",
     ],
     items: [
-      "Calcualte the deductible amount of borrowing costs on a rental property. Allow for rounding differences.</p>⭐Enter each borrowing cost item</p><p>⭐Enter the loan start date</p><p>⭐Enter the loan term (years)</p><p>⭐Enter the work‑related use percentage</p><p>⭐Click <strong>Submit</strong> to calculate deductible amounts for each year</p></p>",
+      "Calculate the deductible amount of borrowing costs on a rental property. Allow for rounding differences.</p>⭐Enter each borrowing cost item</p><p>⭐Enter the loan start date</p><p>⭐Enter the loan term (years)</p><p>⭐Enter the work‑related use percentage</p><p>⭐Click <strong>Submit</strong> to calculate deductible amounts for each year</p></p>",
     ],
     calculator: `
     <div class="calc-box">
