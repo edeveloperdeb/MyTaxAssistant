@@ -10364,6 +10364,7 @@ function calcBorrowingCosts() {
     "bcBroker",
     "bcValuation",
     "bcLMI",
+    "other",
   ];
 
   let total = 0;
