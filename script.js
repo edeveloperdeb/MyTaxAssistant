@@ -9543,95 +9543,99 @@ const rates = {
     aliases: ["Private Health Insurance", "PHI"],
     items: [
       `
-                <div>
-                    <strong>2025/2026 Medicare Levy Surcharge Thresholds</strong>
-                    <table style="width:100%; border-collapse:collapse; font-size:15px; text-align:center;">
-                      <thead>
-                        <tr style="background:#008427; color:#ffffff; font-size:12px;">
-                          <th colspan="2" style="border:1px solid #e0e0e0; padding:8px; width:40%;"></th>
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Tier 1</th>
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Tier 2</th>
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Tier 3</th>
-                        </tr>
+        <div>
+            <strong>2025/2026 Medicare Levy Surcharge Thresholds</strong>
+            <table style="width:100%; border-collapse:collapse; font-size:15px; text-align:center;">
+              <thead>
+                <tr style="background:#008427; color:#ffffff; font-size:12px;">
+                  <th colspan="2" style="border:1px solid #e0e0e0; padding:8px; width:40%;"></th>
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Tier 1</th>
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Tier 2</th>
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Tier 3</th>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px;">
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Single Income</th>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">$101,000 or less</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">$101,001 - $118,000</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">$118,001 - $158,000</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">$158,001 or more</td>
-                        </tr>
+                <tr style="background:#ffffff; color:#262626; font-size:12px;">
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Single Income</th>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">$101,000 or less</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">$101,001 - $118,000</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">$118,001 - $158,000</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">$158,001 or more</td>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px;">
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Family Income*</th>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">$202,000 or less</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">$202,001 - $236,000</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">$236,001 - $316,000</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">$316,001 or more</td>
-                        </tr>
+                <tr style="background:#ffffff; color:#262626; font-size:12px;">
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Family Income*</th>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">$202,000 or less</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">$202,001 - $236,000</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">$236,001 - $316,000</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">$316,001 or more</td>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px; text-align:center;">
-                          <th colspan="5" style="border:1px solid #e0e0e0; padding:8px; width:100%;">Rebate for premiums paid from 1 July 2025 - 31 March 2026</th>
-                        </tr>
+                <tr style="background:#ffffff; color:#262626; font-size:12px; text-align:center;">
+                  <th colspan="5" style="border:1px solid #e0e0e0; padding:8px; width:100%;">Rebate for premiums paid from 1 July 2025 - 31 March 2026</th>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px;">
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Aged <65 years</th>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">24.288%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">16.192%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">8.095%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
-                        </tr>
+                <tr style="background:#ffffff; color:#262626; font-size:12px;">
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Aged <65 years</th>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">24.288%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">16.192%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">8.095%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px;">
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Aged 65 - 69 years</th>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">28.337%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">20.240%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">12.143%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
-                        </tr>
+                <tr style="background:#ffffff; color:#262626; font-size:12px;">
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Aged 65 - 69 years</th>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">28.337%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">20.240%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">12.143%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px;">
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Aged 70 or over</th>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">32.385%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">24.288%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">16.192%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
-                        </tr>
+                <tr style="background:#ffffff; color:#262626; font-size:12px;">
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Aged 70 or over</th>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">32.385%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">24.288%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">16.192%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px; text-align:center;">
-                          <th colspan="5" style="border:1px solid #e0e0e0; padding:8px; width:100%;">Rebate for premiums paid from 1 April 2026 - 30 June 2026</th>
-                        </tr>
+                <tr style="background:#ffffff; color:#262626; font-size:12px; text-align:center;">
+                  <th colspan="5" style="border:1px solid #e0e0e0; padding:8px; width:100%;">Rebate for premiums paid from 1 April 2026 - 30 June 2026</th>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px;">
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Aged <65 years</th>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">24.118%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">16.079%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">8.038%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
-                        </tr>
+                <tr style="background:#ffffff; color:#262626; font-size:12px;">
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Aged <65 years</th>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">24.118%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">16.079%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">8.038%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px;">
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Aged 65 - 69 years</th>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">28.139%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">20.098%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">12.058%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
-                        </tr>
+                <tr style="background:#ffffff; color:#262626; font-size:12px;">
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Aged 65 - 69 years</th>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">28.139%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">20.098%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">12.058%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
+                </tr>
 
-                        <tr style="background:#ffffff; color:#262626; font-size:12px;">
-                          <th style="border:1px solid #e0e0e0; padding:8px;">Aged 70 or over</th>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">32.158%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">24.118%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">16.079%</td>
-                          <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
-                        </tr>
-                      </thead>
-                      </tbody>
-                    </table>
-                    <p style="font-size:12px; text-align:center;">*Family Income thresholds increase by $1,500 for each additional dependent child after the first. Offset not claimed in tax return.
-                      <br>Once lodged the ATO will determine any amounts payable or refundable based on Income for year and any premium reductions already received.<br>Any liability or refund will be shown on Notice of Assessment.</p>
-                  </div>
-                  `,
+                <tr style="background:#ffffff; color:#262626; font-size:12px;">
+                  <th style="border:1px solid #e0e0e0; padding:8px;">Aged 70 or over</th>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">32.158%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">24.118%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">16.079%</td>
+                  <td style="border:1px solid #e0e0e0; padding:8px;">0%</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p style="font-size:12px; text-align:center;">
+              *Family Income thresholds increase by $1,500 for each additional dependent child after the first.<br>
+              Offset not claimed in tax return.<br>
+              Once lodged the ATO will determine any amounts payable or refundable based on Income for year and any premium reductions already received.<br>
+              Any liability or refund will be shown on Notice of Assessment.
+            </p>
+        </div>
+      `,
     ],
   },
 
@@ -9695,23 +9699,24 @@ const rates = {
     aliases: ["RFB", "RESC", "Super", "Fringe Benefits"],
     items: [
       `
-                  <div>
-                    <p style="font-size: 16px">Reportable Fringe Benefits and Reportable Superannuation Contributions impact on the following:</p>
-                      <ul>
-                          <li>Child Support Obligations</li>
-                          <li>Division 293 Tax</li>
-                          <li>Dependant Invalid and Invalid Carer Tax Offset</li>
-                          <li>Employee Share Scheme – Div. 83A</li>
-                          <li>Entitlement to Certain Income Tested Government Benefits</li>
-                          <li>Entitlement to Super Co-contribution</li>
-                          <li>Financial Supplement Scheme Repayments</li>
-                          <li>HELP Repayments</li>
-                          <li>Medicare Levy Surcharge </li>
-                          <li>Private health Insurance Rebate</li>
-                          <li>Seniors and Pensioners Tax Offset</li>
-                          <li>Tax Offset for Contributions to Spouse's Superannuation</li>
-                      </ul>
-                  `,
+        <div>
+          <p style="font-size: 16px">Reportable Fringe Benefits and Reportable Superannuation Contributions impact on the following:</p>
+          <ul>
+              <li>Child Support Obligations</li>
+              <li>Division 293 Tax</li>
+              <li>Dependant Invalid and Invalid Carer Tax Offset</li>
+              <li>Employee Share Scheme – Div. 83A</li>
+              <li>Entitlement to Certain Income Tested Government Benefits</li>
+              <li>Entitlement to Super Co-contribution</li>
+              <li>Financial Supplement Scheme Repayments</li>
+              <li>HELP Repayments</li>
+              <li>Medicare Levy Surcharge</li>
+              <li>Private Health Insurance Rebate</li>
+              <li>Seniors and Pensioners Tax Offset</li>
+              <li>Tax Offset for Contributions to Spouse's Superannuation</li>
+          </ul>
+        </div>
+      `,
     ],
   },
 
@@ -10604,3 +10609,111 @@ function calcTax2027() {
 document.getElementById("printBtn").addEventListener("click", () => {
   window.print();
 });
+
+/* ============================================================
+   1.1 PRE‑RENDER RATES LIST — CLICK TO EXPAND
+   ============================================================ */
+function renderRatesList() {
+  const container = document.getElementById("rateResults");
+
+  container.innerHTML = Object.keys(rates)
+    .map((key) => {
+      const rate = rates[key];
+      return `
+        <div class="rate-item" data-keywords="${rate.aliases.join(" ").toLowerCase()}">
+            <h3 class="rate-title" style="cursor:pointer; color:#000000; font-weight: normal;">📌 ${key}</h3>
+
+            <div class="rate-content" style="display:none; margin-top:10px;">
+                ${rate.items.join("")}
+
+                <button class="rate-back-btn" 
+                        style="margin-top:15px; padding:8px 12px; background:#6c757d; color:white; border:none; border-radius:6px; cursor:pointer;">
+                    ← Back
+                </button>
+            </div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+
+/* ============================================================
+   1.2 FILTER WHEN TYPING
+   ============================================================ */
+document.getElementById("searchRates").addEventListener("input", (e) => {
+  const term = e.target.value.toLowerCase();
+  const items = document.querySelectorAll(".rate-item");
+
+  items.forEach((item) => {
+    const keywords = item.dataset.keywords;
+    const text = item.textContent.toLowerCase();
+
+    if (term === "" || keywords.includes(term) || text.includes(term)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+});
+
+/* ============================================================
+   1.3 INITIALISE ON LOAD
+   ============================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  renderRatesList();
+});
+
+/* ============================================================
+   1.4 CLICK TITLE → SHOW ONLY THAT ITEM
+   ============================================================ */
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("rate-title")) {
+
+    // Get all rate items
+    const allItems = document.querySelectorAll(".rate-item");
+
+    // The clicked item
+    const clickedItem = e.target.parentElement;
+
+    // Hide all items
+    allItems.forEach(item => {
+      item.style.display = "none";
+    });
+
+    // Show only the clicked item
+    clickedItem.style.display = "block";
+
+    // Expand its content
+    const content = clickedItem.querySelector(".rate-content");
+    content.style.display = "block";
+
+    // Scroll into view
+    clickedItem.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+});
+
+/* ============================================================
+   1.5 BACK BUTTON — RETURN TO FULL LIST
+   ============================================================ */
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("rate-back-btn")) {
+
+    // Show all rate items
+    const allItems = document.querySelectorAll(".rate-item");
+    allItems.forEach(item => {
+      item.style.display = "block";
+    });
+
+    // Collapse all content blocks
+    const allContent = document.querySelectorAll(".rate-content");
+    allContent.forEach(content => {
+      content.style.display = "none";
+    });
+
+    // Scroll back to top of Rates tab
+    document.getElementById("tab-rates").scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+
