@@ -273,7 +273,7 @@ const BLOCKS = {
                       <ul>
                           <li><strong>Licences</strong> Heavy Vehicle Permits</li>
                           <li><strong>Professional Fees</strong> Tax Agent Fees, Accountant Fees</li>
-                          <li><strong>Association / Profssional Membership Fees</strong> For Archivist and Record Managers: Australian Society of Archivists (ASA), Records and Information Management Pratitioners Alliance (RIMPA Global), For Curators and Museum Professionals: Australian Museums and Galleries Association (AMaGA) and International Council of Museums (ICOM Australia), Interdiscinplinary Associations: Art Association of Australia and New Zealand (AAANZ), and National Association for the Visual Arts (NAVA)</li>
+                          <li><strong>Association / Profssional Membership Fees: </strong> <br><strong> - For Archivist and Record Managers:</strong> Australian Society of Archivists (ASA), Records and Information Management Pratitioners Alliance (RIMPA Global) <br> <strong> - For Curators and Museum Professionals:</strong> Australian Museums and Galleries Association (AMaGA) and International Council of Museums (ICOM Australia), Interdiscinplinary Associations: Art Association of Australia and New Zealand (AAANZ), and National Association for the Visual Arts (NAVA)</li>
                           <li><strong>Union Fees</strong>Community and Public Sector Union (CPSU), </li>
                       </ul>
                   </div>
@@ -527,16 +527,6 @@ const BLOCKS = {
               <ul>
                 <li><strong>Electronics: </strong> Computers, Laptops , Tablets, Cameras, Printers, Scanners, Monitors, Keyboards, and Mouse</li>
                 <li><strong>General: </strong>Repairs, USBs, Hard Drives, Magnifying Equipment, Conservation Brushes, Museum-grade HEPA Vacuum Cleaners, Bone Folders, Micro Spatulas, Weights and Custom Foam, Sandbag Supports, Digital hygrometers, Data Loggers, Dictaphones</li>
-                <li><strong>Office Furniture: </strong>Desks, Standing Desks, Office Chairs, Bookcases, and Filing Cabinets</li>
-              </ul>
-            </div>
-          `,
-    nurse: `
-            <div>
-              <strong>Tools and Equipment</strong>
-              <ul>
-                <li><strong>Electronics: </strong> Computers, Laptops , Tablets, Printers, Scanners, Monitors, Keyboards, and Mouse</li>
-                <li><strong>General: </strong>Repairs, Stethoscope, USBs, Hard Drives, and Fob Watch</li>
                 <li><strong>Office Furniture: </strong>Desks, Standing Desks, Office Chairs, Bookcases, and Filing Cabinets</li>
               </ul>
             </div>
@@ -1900,7 +1890,7 @@ const deductions = {
       BLOCKS.wfh.general,
     ],
   },
-  // 👉 Occupations to be customised
+
   "Archivist, Curators and Records Managers": {
     aliases: [
       "Archivist",
@@ -1921,16 +1911,17 @@ const deductions = {
       BLOCKS.overtimeMeals.general,
       BLOCKS.stationery.general,
       BLOCKS.ppe.general,
-      BLOCKS.professionalassociation.general,
+      BLOCKS.professionalassociation.archivist,
       BLOCKS.selfEducation.general,
-      BLOCKS.subscriptions.general,
+      BLOCKS.subscriptions.archivist,
       BLOCKS.communication.general,
-      BLOCKS.tools.general,
+      BLOCKS.tools.archivist,
       BLOCKS.travel.general,
       BLOCKS.wfh.general,
     ],
   },
 
+  // 👉 Occupations to be customised
   Cleaners: {
     aliases: [
       "811211",
@@ -9172,6 +9163,734 @@ const deductions = {
 };
 
 /* ----------------------------------------------------
+         FUEL RATES DATA 
+      ---------------------------------------------------- */
+
+const fuelRates = {
+  "2019 / 2020": {
+    Petrol: {
+      VIC: {
+        statewide: 135.1,
+        regional: 133.5,
+        capital: "Melbourne",
+        average: 135.7,
+      },
+      NSW: {
+        statewide: 135.3,
+        regional: 136.3,
+        capital: "Sydney",
+        average: 134.3,
+      },
+      QLD: {
+        statewide: 136.1,
+        regional: 135.1,
+        capital: "Brisbane",
+        average: 136.6,
+      },
+      WA: {
+        statewide: 133.7,
+        regional: 141.0,
+        capital: "Perth",
+        average: 131.6,
+      },
+      SA: {
+        statewide: 135.8,
+        regional: null,
+        capital: "Adelaide",
+        average: 135.7,
+      },
+      TAS: {
+        statewide: 146.1,
+        regional: 145.7,
+        capital: "Hobart",
+        average: 146.6,
+      },
+      NT: {
+        statewide: 146.5,
+        regional: 179.6,
+        capital: "Darwin",
+        average: 134.4,
+      },
+      ACT: {
+        statewide: 135.3,
+        regional: 136.3,
+        capital: "Canberra",
+        average: 137.3,
+      },
+    },
+    Diesel: {
+      VIC: {
+        statewide: 140.1,
+        regional: 140.4,
+        capital: "Melbourne",
+        average: 139.9,
+      },
+      NSW: {
+        statewide: 141.2,
+        regional: 142.7,
+        capital: "Sydney",
+        average: 138.2,
+      },
+      QLD: {
+        statewide: 141.1,
+        regional: 141.2,
+        capital: "Brisbane",
+        average: 140.9,
+      },
+      WA: {
+        statewide: 142.3,
+        regional: 145.0,
+        capital: "Perth",
+        average: 140.3,
+      },
+      SA: {
+        statewide: 141.2,
+        regional: 141.2,
+        capital: "Adelaide",
+        average: 135.9,
+      },
+      TAS: {
+        statewide: 153.2,
+        regional: 152.6,
+        capital: "Hobart",
+        average: 154.5,
+      },
+      NT: {
+        statewide: null,
+        regional: 180.8,
+        capital: "Darwin",
+        average: 139.2,
+      },
+      ACT: {
+        statewide: 141.2,
+        regional: 142.7,
+        capital: "Canberra",
+        average: 145.2,
+      },
+    },
+  },
+
+  "2020 / 2021": {
+    Petrol: {
+      VIC: {
+        statewide: 130.2,
+        regional: 123.5,
+        capital: "Melbourne",
+        average: 132.5,
+      },
+      NSW: {
+        statewide: 128.9,
+        regional: 127.5,
+        capital: "Sydney",
+        average: 129.9,
+      },
+      QLD: {
+        statewide: 130.6,
+        regional: 125.6,
+        capital: "Brisbane",
+        average: 133.3,
+      },
+      WA: {
+        statewide: 126.5,
+        regional: 128.1,
+        capital: "Perth",
+        average: 126.1,
+      },
+      SA: {
+        statewide: 125.0,
+        regional: null,
+        capital: "Adelaide",
+        average: 124.9,
+      },
+      TAS: {
+        statewide: 130.5,
+        regional: 130.5,
+        capital: "Hobart",
+        average: 130.6,
+      },
+      NT: {
+        statewide: 136.7,
+        regional: 168.6,
+        capital: "Darwin",
+        average: 125.0,
+      },
+      ACT: {
+        statewide: 128.9,
+        regional: 127.5,
+        capital: "Canberra",
+        average: 152.7,
+      },
+    },
+    Diesel: {
+      VIC: {
+        statewide: 125.3,
+        regional: 126.1,
+        capital: "Melbourne",
+        average: 124.6,
+      },
+      NSW: {
+        statewide: 125.2,
+        regional: 126.3,
+        capital: "Sydney",
+        average: 122.8,
+      },
+      QLD: {
+        statewide: 124.0,
+        regional: 123.8,
+        capital: "Brisbane",
+        average: 124.3,
+      },
+      WA: {
+        statewide: 125.2,
+        regional: 128.4,
+        capital: "Perth",
+        average: 122.9,
+      },
+      SA: {
+        statewide: 124.9,
+        regional: 124.9,
+        capital: "Adelaide",
+        average: 120.4,
+      },
+      TAS: {
+        statewide: 134.7,
+        regional: 134.0,
+        capital: "Hobart",
+        average: 134.0,
+      },
+      NT: {
+        statewide: null,
+        regional: 166.5,
+        capital: "Darwin",
+        average: 122.9,
+      },
+      ACT: {
+        statewide: 125.2,
+        regional: 126.3,
+        capital: "Canberra",
+        average: 128.6,
+      },
+    },
+  },
+
+  "2021 / 2022": {
+    Petrol: {
+      VIC: {
+        statewide: 171.2,
+        regional: 171.5,
+        capital: "Melbourne",
+        average: 170.4,
+      },
+      NSW: {
+        statewide: 172.2,
+        regional: 171.2,
+        capital: "Sydney",
+        average: 172.8,
+      },
+      QLD: {
+        statewide: 172.0,
+        regional: 170.0,
+        capital: "Brisbane",
+        average: 173.1,
+      },
+      WA: {
+        statewide: 169.9,
+        regional: 172.7,
+        capital: "Perth",
+        average: 169.1,
+      },
+      SA: {
+        statewide: 166.6,
+        regional: null,
+        capital: "Adelaide",
+        average: 165.8,
+      },
+      TAS: {
+        statewide: 178.1,
+        regional: 177.4,
+        capital: "Hobart",
+        average: 179.0,
+      },
+      NT: {
+        statewide: 181.7,
+        regional: 203.0,
+        capital: "Darwin",
+        average: 173.8,
+      },
+      ACT: {
+        statewide: 172.2,
+        regional: 171.2,
+        capital: "Canberra",
+        average: 173.9,
+      },
+    },
+    Diesel: {
+      VIC: {
+        statewide: 173.7,
+        regional: 172.7,
+        capital: "Melbourne",
+        average: 171.6,
+      },
+      NSW: {
+        statewide: 173.5,
+        regional: 174.5,
+        capital: "Sydney",
+        average: 171.4,
+      },
+      QLD: {
+        statewide: 173.9,
+        regional: 173.6,
+        capital: "Brisbane",
+        average: 174.3,
+      },
+      WA: {
+        statewide: 172.0,
+        regional: 174.7,
+        capital: "Perth",
+        average: 170.1,
+      },
+      SA: {
+        statewide: 173.0,
+        regional: 173.0,
+        capital: "Adelaide",
+        average: 170.0,
+      },
+      TAS: {
+        statewide: 180.3,
+        regional: 179.9,
+        capital: "Hobart",
+        average: 181.3,
+      },
+      NT: {
+        statewide: null,
+        regional: 201.1,
+        capital: "Darwin",
+        average: 177.0,
+      },
+      ACT: {
+        statewide: 173.5,
+        regional: 174.5,
+        capital: "Canberra",
+        average: 176.8,
+      },
+    },
+  },
+
+  "2022 / 2023": {
+    Petrol: {
+      VIC: {
+        statewide: 184.1,
+        regional: 180.8,
+        capital: "Melbourne",
+        average: 185.2,
+      },
+      NSW: {
+        statewide: 184.2,
+        regional: 185.1,
+        capital: "Sydney",
+        average: 183.1,
+      },
+      QLD: {
+        statewide: 184.0,
+        regional: 181.7,
+        capital: "Brisbane",
+        average: 185.2,
+      },
+      WA: {
+        statewide: 179.3,
+        regional: 186.7,
+        capital: "Perth",
+        average: 177.3,
+      },
+      SA: {
+        statewide: 178.9,
+        regional: 182.4,
+        capital: "Adelaide",
+        average: 177.7,
+      },
+      TAS: {
+        statewide: 188.3,
+        regional: 188.7,
+        capital: "Hobart",
+        average: 187.7,
+      },
+      NT: {
+        statewide: 197.9,
+        regional: 235.3,
+        capital: "Darwin",
+        average: 184.2,
+      },
+      ACT: {
+        statewide: 184.2,
+        regional: 185.1,
+        capital: "Canberra",
+        average: 187.3,
+      },
+    },
+    Diesel: {
+      VIC: {
+        statewide: 208.3,
+        regional: 211.3,
+        capital: "Melbourne",
+        average: 207.3,
+      },
+      NSW: {
+        statewide: 209.0,
+        regional: 210.6,
+        capital: "Sydney",
+        average: 205.6,
+      },
+      QLD: {
+        statewide: 209.5,
+        regional: 209.9,
+        capital: "Brisbane",
+        average: 209.1,
+      },
+      WA: {
+        statewide: 202.4,
+        regional: 207.8,
+        capital: "Perth",
+        average: 198.6,
+      },
+      SA: {
+        statewide: 205.1,
+        regional: 205.1,
+        capital: "Adelaide",
+        average: 199.8,
+      },
+      TAS: {
+        statewide: 213.9,
+        regional: 213.9,
+        capital: "Hobart",
+        average: 213.9,
+      },
+      NT: {
+        statewide: 231.3,
+        regional: 251.8,
+        capital: "Darwin",
+        average: 218.0,
+      },
+      ACT: {
+        statewide: 209.0,
+        regional: 210.6,
+        capital: "Canberra",
+        average: 214.4,
+      },
+    },
+  },
+
+  "2023 / 2024": {
+    Petrol: {
+      VIC: {
+        statewide: 195.6,
+        regional: 190.1,
+        capital: "Melbourne",
+        average: 197.5,
+      },
+      NSW: {
+        statewide: 197.3,
+        regional: 196.6,
+        capital: "Sydney",
+        average: 197.5,
+      },
+      QLD: {
+        statewide: 198.0,
+        regional: 193.0,
+        capital: "Brisbane",
+        average: 200.6,
+      },
+      WA: {
+        statewide: 190.0,
+        regional: 196.0,
+        capital: "Perth",
+        average: 188.4,
+      },
+      SA: {
+        statewide: 191.1,
+        regional: 191.2,
+        capital: "Adelaide",
+        average: 191.1,
+      },
+      TAS: {
+        statewide: 198.0,
+        regional: 198.9,
+        capital: "Hobart",
+        average: 196.7,
+      },
+      NT: {
+        statewide: 205.6,
+        regional: 241.1,
+        capital: "Darwin",
+        average: 192.6,
+      },
+      ACT: {
+        statewide: 197.3,
+        regional: 196.6,
+        capital: "Canberra",
+        average: 201.3,
+      },
+    },
+    Diesel: {
+      VIC: {
+        statewide: 202.9,
+        regional: 203.4,
+        capital: "Melbourne",
+        average: 202.3,
+      },
+      NSW: {
+        statewide: 199.4,
+        regional: 200.4,
+        capital: "Sydney",
+        average: 197.2,
+      },
+      QLD: {
+        statewide: 203.7,
+        regional: 203.8,
+        capital: "Brisbane",
+        average: 203.6,
+      },
+      WA: {
+        statewide: 200.2,
+        regional: 205.3,
+        capital: "Perth",
+        average: 196.5,
+      },
+      SA: {
+        statewide: 200.0,
+        regional: 200.0,
+        capital: "Adelaide",
+        average: 196.3,
+      },
+      TAS: {
+        statewide: 208.1,
+        regional: 208.7,
+        capital: "Hobart",
+        average: 206.8,
+      },
+      NT: {
+        statewide: 221.0,
+        regional: 248.4,
+        capital: "Darwin",
+        average: 203.2,
+      },
+      ACT: {
+        statewide: 199.4,
+        regional: 200.4,
+        capital: "Canberra",
+        average: 204.5,
+      },
+    },
+  },
+
+  "2024 / 2025": {
+    Petrol: {
+      VIC: {
+        statewide: 181.0,
+        regional: 176.3,
+        capital: "Melbourne",
+        average: 182.0,
+      },
+      NSW: {
+        statewide: 182.1,
+        regional: 180.8,
+        capital: "Sydney",
+        average: 182.7,
+      },
+      QLD: {
+        statewide: 183.6,
+        regional: 179.2,
+        capital: "Brisbane",
+        average: 185.9,
+      },
+      WA: {
+        statewide: 176.3,
+        regional: 180.6,
+        capital: "Perth",
+        average: 175.0,
+      },
+      SA: {
+        statewide: 176.1,
+        regional: 178.3,
+        capital: "Adelaide",
+        average: 175.3,
+      },
+      TAS: {
+        statewide: 181.3,
+        regional: 182.0,
+        capital: "Hobart",
+        average: 180.4,
+      },
+      NT: {
+        statewide: 193.4,
+        regional: 236.9,
+        capital: "Darwin",
+        average: 177.4,
+      },
+      ACT: {
+        statewide: 182.1,
+        regional: 180.8,
+        capital: "Canberra",
+        average: 186.5,
+      },
+    },
+    Diesel: {
+      VIC: {
+        statewide: 185.7,
+        regional: 187.3,
+        capital: "Melbourne",
+        average: 184.4,
+      },
+      NSW: {
+        statewide: 184.8,
+        regional: 186.0,
+        capital: "Sydney",
+        average: 181.7,
+      },
+      QLD: {
+        statewide: 185.6,
+        regional: 185.6,
+        capital: "Brisbane",
+        average: 185.6,
+      },
+      WA: {
+        statewide: 181.3,
+        regional: 185.8,
+        capital: "Perth",
+        average: 178.0,
+      },
+      SA: {
+        statewide: 182.4,
+        regional: 182.5,
+        capital: "Adelaide",
+        average: 179.0,
+      },
+      TAS: {
+        statewide: 185.6,
+        regional: 185.7,
+        capital: "Hobart",
+        average: 185.4,
+      },
+      NT: {
+        statewide: 205.9,
+        regional: 242.7,
+        capital: "Darwin",
+        average: 182.1,
+      },
+      ACT: {
+        statewide: 184.8,
+        regional: 186.0,
+        capital: "Canberra",
+        average: 194.0,
+      },
+    },
+  },
+
+  "2025 / 2026": {
+    Petrol: {
+      VIC: {
+        statewide: 186.1,
+        regional: 180.9,
+        capital: "Melbourne",
+        average: 187.9,
+      },
+      NSW: {
+        statewide: 184.5,
+        regional: 183.5,
+        capital: "Sydney",
+        average: 184.9,
+      },
+      QLD: {
+        statewide: 188.1,
+        regional: 184.3,
+        capital: "Brisbane",
+        average: 190.2,
+      },
+      WA: {
+        statewide: 180.8,
+        regional: 186.9,
+        capital: "Perth",
+        average: 179.1,
+      },
+      SA: {
+        statewide: 179.5,
+        regional: 186.3,
+        capital: "Adelaide",
+        average: 177.1,
+      },
+      TAS: {
+        statewide: 184.5,
+        regional: 185.8,
+        capital: "Hobart",
+        average: 182.8,
+      },
+      NT: {
+        statewide: 204.6,
+        regional: 242.4,
+        capital: "Darwin",
+        average: 190.2,
+      },
+      ACT: {
+        statewide: 184.5,
+        regional: 183.5,
+        capital: "Canberra",
+        average: 188.9,
+      },
+    },
+    Diesel: {
+      VIC: {
+        statewide: 207.2,
+        regional: 207.9,
+        capital: "Melbourne",
+        average: 205.1,
+      },
+      NSW: {
+        statewide: 205.4,
+        regional: 207.0,
+        capital: "Sydney",
+        average: 201.7,
+      },
+      QLD: {
+        statewide: 207.2,
+        regional: 207.8,
+        capital: "Brisbane",
+        average: 206.7,
+      },
+      WA: {
+        statewide: 203.2,
+        regional: 207.4,
+        capital: "Perth",
+        average: 200.2,
+      },
+      SA: {
+        statewide: 206.3,
+        regional: 206.3,
+        capital: "Adelaide",
+        average: 201.0,
+      },
+      TAS: {
+        statewide: 207.3,
+        regional: 207.4,
+        capital: "Hobart",
+        average: 207.3,
+      },
+      NT: {
+        statewide: 227.3,
+        regional: 257.6,
+        capital: "Darwin",
+        average: 207.5,
+      },
+      ACT: {
+        statewide: 205.4,
+        regional: 207.0,
+        capital: "Canberra",
+        average: 214.9,
+      },
+    },
+  },
+};
+
+
+/* ----------------------------------------------------
          DATA STRUCTURE (RATES)
       ---------------------------------------------------- */
 
@@ -10108,6 +10827,139 @@ const calculations = {
               `,
   },
 
+  "Fuel Calculation Worksheet": {
+    aliases: [
+      "fuel",
+      "petrol",
+      "diesel",
+      "fuel cost",
+      "fuel consumption",
+      "worksheet",
+    ],
+    items: [
+      "Calculate fuel usage and cost based on kilometres travelled and regional fuel rates.<p>⭐ Select year of tax return, state and fuel type from dropdown menus</p><p>⭐ Enter the total kilometres travelled as well as the fuel consumption data (you must enter at least one)</p>⭐ Click <strong>Calculate</strong></p><p>⭐ You can then choose the amount based on the type of driving conditions</p>",
+    ],
+    calculator: `
+  <div class="calc-box fuel-layout">
+
+    <table class="fuel-table">
+
+      <!-- Year + State -->
+      <tr>
+        <th>Year</th>
+        <td>
+          <select id="fuelYear">
+            <option>2025 / 2026</option>
+            <option>2024 / 2025</option>
+            <option>2023 / 2024</option>
+            <option>2022 / 2023</option>
+            <option>2021 / 2022</option>
+            <option>2020 / 2021</option>
+            <option>2019 / 2020</option>
+          </select>
+        </td>
+
+        <th>State</th>
+        <td>
+          <select id="fuelState">
+            <option>VIC</option><option>NSW</option><option>QLD</option><option>SA</option>
+            <option>WA</option><option>TAS</option><option>NT</option><option>ACT</option>
+          </select>
+        </td>
+      </tr>
+
+      <!-- Fuel Type + Model -->
+      <tr>
+        <th>Fuel Type</th>
+        <td>
+          <select id="fuelType">
+            <option>Petrol</option><option>Diesel</option>
+          </select>
+        </td>
+
+        <th>Make / Model</th>
+        <td><input id="fuelModel" type="text" placeholder="e.g. Nissan X‑Trail"></td>
+      </tr>
+
+      <!-- Fuel Consumption -->
+      <tr class="section-header">
+        <th colspan="4">Fuel Consumption (L/100km)</th>
+      </tr>
+
+      <!-- Row 1: Total kilometres travelled -->
+      <tr>
+        <th>Enter Total Kilometres</th>
+        <td style="text-align:center;">
+          <input id="fuelKm" type="number" style="width:200px;">
+        </td>
+      </tr>
+
+      <!-- Row 2: Combined, Urban, Extra all on one row -->
+      <tr>
+        <th>Fuel Consumption Data</th>
+        <th>Combined</th>
+        <th>Urban</th>
+        <th>Extra</th>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td><input id="fuelComb" type="number" step="0.1"></td>
+        <td><input id="fuelUrban" type="number" step="0.1"></td>
+        <td><input id="fuelExtra" type="number" step="0.1"></td>
+      </tr>
+
+    </table>
+
+    <!-- Calculate button directly under Fuel Consumption -->
+    <button class="fuel-calc-btn" onclick="calcFuelWorksheet()">Calculate</button>
+
+    <!-- Fuel Prices -->
+    <table class="fuel-table" id="fuelPriceTable">
+      <tr class="section-header">
+        <th colspan="4">Fuel Prices</th>
+      </tr>
+
+      <tr class="fuel-price-headings">
+        <th>Statewide</th>
+        <th>Regional</th>
+        <th id="capitalCityHeading">Capital City</th>
+        <th>Average</th>
+      </tr>
+
+      <tr>
+        <td><span id="fpStatewide">–</span></td>
+        <td><span id="fpRegional">–</span></td>
+        <td><span id="fpCapital">–</span></td>
+        <td><span id="fpAverage">–</span></td>
+      </tr>
+    </table>
+
+    <!-- Calculation Results -->
+    <table class="fuel-table" id="fuelCalcResults" style="display:none;">
+      <tr class="section-header">
+        <th colspan="4">Calculation Results ($)</th>
+      </tr>
+
+      <tr class="fuel-price-headings">
+        <th>Statewide</th>
+        <th>Regional</th>
+        <th id="capitalCityHeading2">Capital City</th>
+        <th>Average</th>
+      </tr>
+
+      <tr>
+        <td><span id="fcStatewide">–</span></td>
+        <td><span id="fcRegional">–</span></td>
+        <td><span id="fcCapital">–</span></td>
+        <td><span id="fcAverage">–</span></td>
+      </tr>
+    </table>
+
+  </div>
+`,
+  },
+
   Telephone: {
     aliases: ["telephone", "phone", "mobile"],
     items: [
@@ -10498,6 +11350,67 @@ function calcDays() {
 }
 
 /* ------------------------------
+         FUEL CALCULATION
+      ------------------------------ */
+
+        function calcFuelWorksheet() {
+          const year = document.getElementById("fuelYear").value;
+          const state = document.getElementById("fuelState").value;
+          const type = document.getElementById("fuelType").value;
+          const comb = parseFloat(document.getElementById("fuelComb").value);
+          const km = parseFloat(document.getElementById("fuelKm").value);
+
+          const yearData = fuelRates[year]?.[type]?.[state];
+
+          if (!yearData) {
+            alert("No fuel rate data found for that selection.");
+            return;
+          }
+
+          // Correct capital city names
+          const capitalCities = {
+            VIC: "Melbourne",
+            NSW: "Sydney",
+            QLD: "Brisbane",
+            SA: "Adelaide",
+            WA: "Perth",
+            TAS: "Hobart",
+            NT: "Darwin",
+            ACT: "Canberra",
+          };
+
+//          document.getElementById("capitalCityHeading").innerText =
+//            capitalCities[state];
+          document.getElementById("capitalCityHeading2").innerText =
+            capitalCities[state];
+
+          // Fill fuel price table
+          document.getElementById("fpStatewide").innerText = yearData.statewide ?? "–";
+          document.getElementById("fpRegional").innerText = yearData.regional ?? "–";
+          document.getElementById("fpCapital").innerText = yearData.capital ?? "–";
+          document.getElementById("fpAverage").innerText = yearData.average ?? "–";
+
+          if (isNaN(comb) || isNaN(km)) {
+            alert("Please enter fuel consumption and kilometres.");
+            return;
+          }
+
+          const calcCost = (rate) => ((comb * km) / 100) * (rate / 100);
+
+          // Fill calculation results table
+          document.getElementById("fcStatewide").innerText =
+            "$" + calcCost(yearData.statewide).toFixed(2);
+          document.getElementById("fcRegional").innerText =
+            "$" + calcCost(yearData.regional).toFixed(2);
+//          document.getElementById("fcCapital").innerText =
+//            "$" + calcCost(yearData.capital).toFixed(2);
+          document.getElementById("fcAverage").innerText =
+            "$" + calcCost(yearData.average).toFixed(2);
+
+          document.getElementById("fuelCalcResults").style.display = "table";
+        }
+
+/* ------------------------------
          TELEPHONE CALCULATION
       ------------------------------ */
 function calcTelephone() {
@@ -10611,7 +11524,8 @@ document.getElementById("printBtn").addEventListener("click", () => {
 });
 
 /* ============================================================
-   1.1 PRE‑RENDER RATES LIST — CLICK TO EXPAND
+   1.1 to 1.5 relate to RATES
+    1.1 PRE‑RENDER RATES LIST — CLICK TO EXPAND
    ============================================================ */
 function renderRatesList() {
   const container = document.getElementById("rateResults");
@@ -10716,4 +11630,110 @@ document.addEventListener("click", (e) => {
   }
 });
 
+/* ============================================================
+   2.1 to 2.5 relate to CALCUALTIONS
+    2.1 PRE‑RENDER CALCULATIONS LIST
+   ============================================================ */
+function renderCalculationsList() {
+  const container = document.getElementById("calculationResults");
+
+  container.innerHTML = Object.keys(calculations)
+    .map((key) => {
+      const calc = calculations[key];
+      return `
+        <div class="calculation-item" data-keywords="${calc.aliases.join(" ").toLowerCase()}">
+
+            <h3 class="calculation-title" style="cursor:pointer; color:#000; font-weight: normal;">🧮 ${key}</h3>
+
+            <div class="calculation-content" style="display:none; margin-top:10px;">
+                
+                <div class="calc-description">
+                    ${calc.items.join("")}
+                </div>
+
+                <div class="calc-ui">
+                    ${calc.calculator}
+                </div>
+
+                <button class="calculation-back-btn"
+                        style="margin-top:15px; padding:8px 12px; background:#6c757d; color:white; border:none; border-radius:6px; cursor:pointer;">
+                    ← Back
+                </button>
+
+            </div>
+        </div>
+      `;
+    })
+    .join("");
+}
+
+/* ============================================================
+   2.2 FILTER CALCULATIONS WHEN TYPING
+   ============================================================ */
+document.getElementById("searchCalculations").addEventListener("input", (e) => {
+  const term = e.target.value.toLowerCase();
+  const items = document.querySelectorAll(".calculation-item");
+
+  items.forEach((item) => {
+    const keywords = item.dataset.keywords;
+    const text = item.textContent.toLowerCase();
+
+    if (term === "" || keywords.includes(term) || text.includes(term)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+});
+
+/* ============================================================
+   2.3 CLICK TITLE → SHOW ONLY THAT CALCULATION
+   ============================================================ */
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("calculation-title")) {
+
+    const allItems = document.querySelectorAll(".calculation-item");
+    const clickedItem = e.target.parentElement;
+
+    // Hide all
+    allItems.forEach(item => item.style.display = "none");
+
+    // Show clicked
+    clickedItem.style.display = "block";
+
+    // Expand content
+    const content = clickedItem.querySelector(".calculation-content");
+    content.style.display = "block";
+
+    // Scroll into view
+    clickedItem.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+});
+
+/* ============================================================
+   2.4 BACK BUTTON — RETURN TO FULL CALCULATIONS LIST
+   ============================================================ */
+document.addEventListener("click", (e) => {
+  if (e.target.classList.contains("calculation-back-btn")) {
+
+    const allItems = document.querySelectorAll(".calculation-item");
+    const allContent = document.querySelectorAll(".calculation-content");
+
+    // Show all items
+    allItems.forEach(item => item.style.display = "block");
+
+    // Collapse all content
+    allContent.forEach(content => content.style.display = "none");
+
+    // Scroll back to top of Calculations tab
+    document.getElementById("tab-calculations").scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+/* ============================================================
+   2.5 INITIALISE CALCULATIONS ON LOAD
+   ============================================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  renderCalculationsList();
+});
 
