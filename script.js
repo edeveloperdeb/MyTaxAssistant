@@ -10896,17 +10896,20 @@ const calculations = {
 
       <!-- Row 2: Combined, Urban, Extra all on one row -->
       <tr>
-        <th>Fuel Consumption Data</th>
-        <th>Combined</th>
-        <th>Urban</th>
-        <th>Extra</th>
+        <th>Fuel Consumption</th>
+        <th>          
+          <select id="consumptiondata">
+            <option>Combined</option>
+            <option>Urban</option>
+            <option>Extra</option>
+          </select></th>
+        <th></th>
+        <th></th>
       </tr>
 
       <tr>
         <td></td>
-        <td><input id="fuelComb" type="number" step="0.1"></td>
-        <td><input id="fuelUrban" type="number" step="0.1"></td>
-        <td><input id="fuelExtra" type="number" step="0.1"></td>
+        <td><input id="fuelComb" type="number" step="0.1;"></td>
       </tr>
 
     </table>
