@@ -11020,10 +11020,10 @@ const calculations = {
                   <div class="calc-box">
 
                       <label>Assessable Income:</label>
-                      <input id="assessableIncome" type="number">
+                      <input id="assessableIncome26" type="number">
 
                       <label>Total Deductions:</label>
-                      <input id="totalDeductions" type="number">
+                      <input id="totalDeductions26" type="number">
 
                       <button onclick="calcTax2026()">Calculate</button>
 
@@ -11041,10 +11041,10 @@ const calculations = {
                   <div class="calc-box">
 
                       <label>Assessable Income:</label>
-                      <input id="assessableIncome" type="number">
+                      <input id="assessableIncome27" type="number">
 
                       <label>Total Deductions:</label>
-                      <input id="totalDeductions" type="number">
+                      <input id="totalDeductions27" type="number">
 
                       <button onclick="calcTax2027()">Calculate</button>
 
@@ -11467,9 +11467,9 @@ function calcTax2025() {
       -------------------------------------------- */
 function calcTax2026() {
   const assessable =
-    parseFloat(document.getElementById("assessableIncome").value) || 0;
+    parseFloat(document.getElementById("assessableIncome26").value) || 0;
   const deductions =
-    parseFloat(document.getElementById("totalDeductions").value) || 0;
+    parseFloat(document.getElementById("totalDeductions26").value) || 0;
 
   const taxable = assessable - deductions;
   let tax = 0;
@@ -11495,9 +11495,9 @@ function calcTax2026() {
       -------------------------------------------- */
 function calcTax2027() {
   const assessable =
-    parseFloat(document.getElementById("assessableIncome").value) || 0;
+    parseFloat(document.getElementById("assessableIncome27").value) || 0;
   const deductions =
-    parseFloat(document.getElementById("totalDeductions").value) || 0;
+    parseFloat(document.getElementById("totalDeductions27").value) || 0;
 
   const taxable = assessable - deductions;
   let tax = 0;
