@@ -10924,7 +10924,7 @@ const calculations = {
   "Depreciation (Adjusted start date)": {
     aliases: ["depreciation", "asset", "decline in value"],
     items: [
-      "Calculate adjustable values of an asset that was previously used for non taxable purposes or was not used from the purchase date of the asset. <p>⭐Enter <strong>Cost</strong>, <strong>Purchase Date</strong>, and <strong>Date the asset was first used to earn income</strong></p><p>⭐Select <strong>Method</strong> (Diminishing Value or Prime Cost)</p><p>⭐Enter <strong>Effective Life</strong> (in years)</p><p>⭐Enter <strong>Taxable Use %</strong> when first used for taxable purposes (default 100%)</p><p>⭐Click <strong>Calculate</strong></p><p>⚠️There may be rounding differences between tax preparation software, manual calculations and this calculator</p>",
+      "Calculate adjustable values of an asset that was previously used for non taxable purposes or was not used from the purchase date of the asset. <p>⭐Enter <strong>Cost</strong>, <strong>Purchase Date</strong>, and <strong>Date the asset was first used to earn income</strong></p><p>⭐Select <strong>Method</strong> (Diminishing Value or Prime Cost)</p><p>⭐Enter <strong>Effective Life</strong> (in years)</p><p>⭐Enter <strong>Taxable Use %</strong> when first used for taxable purposes (default 100%)</p><p>⭐Click <strong>Calculate</strong></p><p>⚠️There may be rounding differences between tax preparation software, manual calculations and this calculator</p><p>💡If printing to PDF - select <strong>Landscape</strong> for your page orientation.</p>",
     ],
     calculator: `
     <div id="depCalc">
