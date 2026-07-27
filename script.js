@@ -72,6 +72,18 @@ const BLOCKS = {
                   </div>
           `,
 
+    cleaner: `
+                  <div>
+                    <strong>Clothing and Uniform Expenses</strong>
+                    <ul>
+                      <li><strong>Maintenance:</strong> Laundry, Dry Cleaning, Laundromat (washing and drying), and Ironing.</li>
+                      <li><strong>Compulsory Uniform:</strong> Shirts, Pants, and Skirts. May include Footwear.</li>
+                      <li><strong>Non-Compulsory Uniform:</strong> Complete Outfits of Shirts, Pants, Skirts, and Jackets.</li>
+                      <li><strong>Protective Clothing:</strong> Fire-Resistant Clothing, Sun-Protective clothing, High-Visibility Vests, Safety-Coloured Vests, Steel-Capped Boots, Heavy-Duty Gloves, Overalls, and Heavy-Duty Shirts and Pants (jeans are generally excluded).</li>
+                    </ul>
+                  </div>    
+          `,
+
     nurse: `
                   <div>
                     <strong>Clothing and Uniform Expenses</strong>
@@ -118,6 +130,17 @@ const BLOCKS = {
                     </ul>
                   </div>
           `,
+    tradie: `
+                  <div>
+                    <strong>Clothing and Uniform Expenses</strong>
+                    <ul>
+                      <li><strong>Maintenance:</strong> Laundry, Dry Cleaning, Laundromat (washing and drying), and Ironing.</li>
+                      <li><strong>Compulsory Uniform:</strong> Accessories, Shirts, Pants, Skirts, Jackets, and Ties.</li>
+                      <li><strong>Non-Compulsory Uniform:</strong> Complete Outfits of Shirts, Pants, Skirts, Jackets, Accessories and Ties.</li>
+                      <li><strong>Protective Clothing:</strong> Fire-Resistant Clothing, Sun-Protective clothing, High-Visibility Vests, Safety-Coloured Vests, Steel-Capped Boots, Heavy-Duty Gloves, Overalls, and Heavy-Duty Shirts and Pants (jeans are generally excluded).</li>
+                    </ul>
+                  </div>
+          `,
   },
 
   /* ------------------------------
@@ -129,6 +152,9 @@ const BLOCKS = {
           `,
     actor: `
                   <div><strong>Eyewear:</strong> Costume Glasses, Sunglasses, Goggles, Safety Glasses, and Tinted Lenses to alter eye color if required for a role</div>
+          `,
+    cleaner: `
+                  <div><strong>Eyewear:</strong> Sunglasses, Goggles, and Safety Glasses<div>
           `,
   },
 
@@ -171,6 +197,17 @@ const BLOCKS = {
                         </ul>
                   </div>
           `,
+
+    cleaner: `
+                <div>
+                  <strong>Motor Vehicles</strong>
+                    <ul>
+                      <li>Carry bulky tools and/or equipment:</strong> No place to leave them at work. The items are too large and heavy (generally over 20kgs). May include vaccuum cleaner, pressure washing systems, floor polishers etc</li>
+                      <li><strong>Logbook Method:</strong> Cleaning, Depreciation, Fuel, Interest on Car Loan, Lease Payments, Oil, Repairs, Registration, Roadside Assistance, and Services.</li>
+                      <li><strong>Cents per km:</strong> Reasonable estimate of kilometres travelled. Capped at 5,000 kms per car per tax return.</li>
+                    </ul>
+          `,
+
     police: `
                   <div>
                     <strong>Motor Vehicles</strong>
@@ -181,6 +218,16 @@ const BLOCKS = {
                             <li><strong>Cents per km:</strong> Reasonable estimate of kilometres travelled. Capped at 5,000 kms per car per tax return.</li>
                         </ul>
                   </div>
+          `,
+    tradie: `
+                <div>
+                  <strong>Motor Vehicles</strong>
+                    <ul>
+                      <li>Carry bulky tools and/or equipment:</strong> No place to leave them at work. The items are too large and heavy (generally over 20kgs). Employee should be encouraged to get a letter from employer stating that there is no safe place to keep tools onsite.</li>
+                      <li><strong>Travel:</strong> Site to site travel, driving between different construction sites, cient meetings, or material suppliers during the day.</li>
+                      <li><strong>Logbook Method:</strong> Cleaning, Depreciation, Fuel, Interest on Car Loan, Lease Payments, Oil, Repairs, Registration, Roadside Assistance, and Services.</li>
+                      <li><strong>Cents per km:</strong> Reasonable estimate of kilometres travelled. Capped at 5,000 kms per car per tax return.</li>
+                    </ul>
           `,
   },
 
@@ -531,6 +578,17 @@ const BLOCKS = {
               </ul>
             </div>
           `,
+    cleaner: `
+            <div>
+              <strong>Tools and Equipment</strong>
+                <ul>
+                  <li><strong>Anciliary Equipment: </strong>Walk Behind/Ride On Scrubbers, Floor Polishers and Burnishers, Commercial Sweepers, Carpet Cleaners, Air Movers, Pressure Washers, Steam Cleaners, Hardwood Floor Cleaning Machines, Industrial Wet/Dry Vacuums, Backpack Vacuums, Upright Vacuums, Mops and Buckets, Brooms and Dustpans, Cleaning Carts and Trolleys, Dusting Tools, Lint Rollers, Sticky Dust Traps, Electrostatic Sprayers, Foggers and Misters, UV-C Disinfection Lights, Ozone Generators, Handheld Discenfectant Sprayers, Trash Bins and Liners, Squeegies and Extension Poles, and Wet Floor Signs. </li>
+                  <li><strong>Electronics: </strong> Computers, Laptops , Tablets, Printers, Scanners, Monitors, GPS, Keyboards, and Mouse</li>
+                  <li><strong>General: </strong>Repairs, USBs, and Hard Drives</li>
+                  <li><strong>Office Furniture: </strong>Desks, Standing Desks, Office Chairs, Bookcases, and Filing Cabinets</li>
+                </ul>
+              </div>
+          `,
     forestry: `
                   <div>
                     <strong>Tools and Equipment</strong>
@@ -578,6 +636,17 @@ const BLOCKS = {
                 <li><strong>Search and Rescue: </strong>Headlamps, Hydration Packs, Hiking Boots, Work Gloves, and Wet Suits</li>
               </ul>
             </div>
+          `,
+    tradie: `
+                  <div>
+                    <strong>Tools and Equipment</strong>
+                    <ul>
+                      <li><strong>Anciliary Equipment: </strong>Measuring Tools, Hand Tools (Hammers, Spanners, Screwdrivers, Pliers and Wrenches), Power Tools (Drills, Grinders, Electric Sanders, Circular Saws, and Nail Guns), Equipment and Storage (Toolboxes, Ladders, Work Lights and High Pressure Cleaners), Ear Muffs, and Hard Hats</li>
+                      <li><strong>Electronics: </strong> Computers, Laptops , Tablets, Printers, Scanners, Monitors, GPS, Keyboards, and Mouse</li>
+                      <li><strong>General: </strong>Running Costs (Money spent on Repairing, Servicing, Maintaining and Insuring work tools), USBs, and Hard Drives</li>
+                      <li><strong>Office Furniture: </strong>Desks, Standing Desks, Office Chairs, Bookcases, and Filing Cabinets</li>
+                    </ul>
+                  </div>
           `,
   },
 
@@ -1921,7 +1990,6 @@ const deductions = {
     ],
   },
 
-  // 👉 Occupations to be customised
   Cleaners: {
     aliases: [
       "811211",
@@ -1948,10 +2016,10 @@ const deductions = {
     ],
     items: [
       BLOCKS.bags.general,
-      BLOCKS.clothing.general,
-      BLOCKS.Eyewear.general,
+      BLOCKS.clothing.cleaner,
+      BLOCKS.Eyewear.cleaner,
       BLOCKS.firstAid.general,
-      BLOCKS.motorVehicles.general,
+      BLOCKS.motorVehicles.cleaner,
       BLOCKS.overtimeMeals.general,
       BLOCKS.stationery.general,
       BLOCKS.ppe.general,
@@ -1959,7 +2027,7 @@ const deductions = {
       BLOCKS.selfEducation.general,
       BLOCKS.subscriptions.general,
       BLOCKS.communication.general,
-      BLOCKS.tools.general,
+      BLOCKS.tools.cleaner,
       BLOCKS.travel.general,
       BLOCKS.wfh.general,
     ],
@@ -1979,10 +2047,10 @@ const deductions = {
     ],
     items: [
       BLOCKS.bags.general,
-      BLOCKS.clothing.general,
+      BLOCKS.clothing.tradie,
       BLOCKS.Eyewear.general,
       BLOCKS.firstAid.general,
-      BLOCKS.motorVehicles.general,
+      BLOCKS.motorVehicles.tradie,
       BLOCKS.overtimeMeals.general,
       BLOCKS.stationery.general,
       BLOCKS.ppe.general,
@@ -1990,7 +2058,7 @@ const deductions = {
       BLOCKS.selfEducation.general,
       BLOCKS.subscriptions.general,
       BLOCKS.communication.general,
-      BLOCKS.tools.general,
+      BLOCKS.tools.tradie,
       BLOCKS.travel.general,
       BLOCKS.wfh.general,
     ],
@@ -2060,10 +2128,10 @@ const deductions = {
     ],
     items: [
       BLOCKS.bags.general,
-      BLOCKS.clothing.general,
+      BLOCKS.clothing.tradie,
       BLOCKS.Eyewear.general,
       BLOCKS.firstAid.general,
-      BLOCKS.motorVehicles.general,
+      BLOCKS.motorVehicles.tradie,
       BLOCKS.overtimeMeals.general,
       BLOCKS.stationery.general,
       BLOCKS.ppe.general,
@@ -2071,12 +2139,12 @@ const deductions = {
       BLOCKS.selfEducation.general,
       BLOCKS.subscriptions.general,
       BLOCKS.communication.general,
-      BLOCKS.tools.general,
+      BLOCKS.tools.tradie,
       BLOCKS.travel.general,
       BLOCKS.wfh.general,
     ],
   },
-
+  // 👉 Occupations to be customised
   "Dentist, Dental Nurse, Dental Technician and Dental Hygienist": {
     aliases: [
       "Dentist",
@@ -3998,10 +4066,10 @@ const deductions = {
     ],
     items: [
       BLOCKS.bags.general,
-      BLOCKS.clothing.general,
+      BLOCKS.clothing.tradie,
       BLOCKS.Eyewear.general,
       BLOCKS.firstAid.general,
-      BLOCKS.motorVehicles.general,
+      BLOCKS.motorVehicles.tradie,
       BLOCKS.overtimeMeals.general,
       BLOCKS.stationery.general,
       BLOCKS.ppe.general,
@@ -4009,7 +4077,7 @@ const deductions = {
       BLOCKS.selfEducation.general,
       BLOCKS.subscriptions.general,
       BLOCKS.communication.general,
-      BLOCKS.tools.general,
+      BLOCKS.tools.tradie,
       BLOCKS.travel.general,
       BLOCKS.wfh.general,
     ],
@@ -4041,10 +4109,10 @@ const deductions = {
     ],
     items: [
       BLOCKS.bags.general,
-      BLOCKS.clothing.general,
+      BLOCKS.clothing.tradie,
       BLOCKS.Eyewear.general,
       BLOCKS.firstAid.general,
-      BLOCKS.motorVehicles.general,
+      BLOCKS.motorVehicles.tradie,
       BLOCKS.overtimeMeals.general,
       BLOCKS.stationery.general,
       BLOCKS.ppe.general,
@@ -4052,7 +4120,7 @@ const deductions = {
       BLOCKS.selfEducation.general,
       BLOCKS.subscriptions.general,
       BLOCKS.communication.general,
-      BLOCKS.tools.general,
+      BLOCKS.tools.tradie,
       BLOCKS.travel.general,
       BLOCKS.wfh.general,
     ],
@@ -4069,10 +4137,10 @@ const deductions = {
     ],
     items: [
       BLOCKS.bags.general,
-      BLOCKS.clothing.general,
+      BLOCKS.clothing.tradie,
       BLOCKS.Eyewear.general,
       BLOCKS.firstAid.general,
-      BLOCKS.motorVehicles.general,
+      BLOCKS.motorVehicles.tradie,
       BLOCKS.overtimeMeals.general,
       BLOCKS.stationery.general,
       BLOCKS.ppe.general,
@@ -4080,7 +4148,7 @@ const deductions = {
       BLOCKS.selfEducation.general,
       BLOCKS.subscriptions.general,
       BLOCKS.communication.general,
-      BLOCKS.tools.general,
+      BLOCKS.tools.tradie,
       BLOCKS.travel.general,
       BLOCKS.wfh.general,
     ],
@@ -4475,7 +4543,7 @@ const deductions = {
         BLOCKS.ppe.general,
         BLOCKS.professionalassociation.general,
         BLOCKS.selfEducation.general,
-        BLOCKS.subscriptions.general,
+        BLOCKS.subscriptions.it,
         BLOCKS.communication.general,
         BLOCKS.tools.general,
         BLOCKS.travel.general,
@@ -9929,6 +9997,32 @@ const rates = {
     ],
   },
 
+  "Division 293": {
+    aliases: ["div 293", "293"],
+    items: [
+      "An individual's income is added to certain super contributions, and compared to the Division 293 threshold. Division 293 tax is payable on the excess over the threshold, or on the super contributions, whichever is less. <br><br> The rate of Division 293 tax is <strong>15%</strong>",
+      `
+      <p></p>
+        <table style="width:40%; border-collapse:collapse; font-size:14px; text-align:center;">
+          <tr style="background:#008427; color:#ffffff; font-size: 12px;">
+            <th style="padding:12px 6px;">Income Year</th>
+            <th>Threshold</th>
+          </tr>
+
+          <tr>
+            <td style="padding:12px 6px;">2017-2018 onwards</td>
+            <td style="padding:12px 6px;">$250,000</td>
+          </tr>
+
+          <tr>
+            <td style="padding:12px 6px;">2012-2013 to 2016-2027</td>
+            <td style="padding:12px 6px;">$300,000</td>
+          </tr>
+        </table>
+      `,
+    ],
+  },
+
   "Employee Truck Drivers - Reasonable Meal Expenses": {
     aliases: [
       "TD 2025/4",
@@ -10825,6 +10919,73 @@ const calculations = {
                       <div id="dateResult"></div>
                   </div>
               `,
+  },
+
+  "Depreciation (Adjusted start date)": {
+    aliases: ["depreciation", "asset", "decline in value"],
+    items: [
+      "Calculate adjustable values of an asset that was previously used for non taxable purposes or was not used from the purchase date of the asset. <p>⭐Enter <strong>Cost</strong>, <strong>Purchase Date</strong>, and <strong>Date the asset was first used to earn income</strong></p><p>⭐Select <strong>Method</strong> (Diminishing Value or Prime Cost)</p><p>⭐Enter <strong>Effective Life</strong> (in years)</p><p>⭐Enter <strong>Taxable Use %</strong> when first used for taxable purposes (default 100%)</p><p>⭐Click <strong>Calculate</strong></p><p>⚠️There may be rounding differences between tax preparation software, manual calculations and this calculator</p>",
+    ],
+    calculator: `
+    <div id="depCalc">
+        <div class="calc-box">
+
+          <table class="depTableDesc">
+            <tr>
+              <th>Asset Description</th>
+                <td>
+                    <input id="depAssetDesc" type="text">
+                </td>
+            </tr>
+          </table>
+
+          <table class="depTable">
+            <tr>
+              <th>Cost</th>
+                <td>
+                    <input id="depCost" type="number">
+                </td>
+
+              <th>Purchase Date</th>
+                <td>
+                    <input id="depPurchase" type="date">
+                </td>
+
+              <th>Date first used</th>
+                <td>
+                    <input id="depFirstTax" type="date">
+                </td>
+            </tr>
+          </table>
+
+          <table class="depTable">
+            <tr>
+              <th>Method</th>
+                <td>
+                  <select id="depMethod">
+                    <option value="DV">Diminishing Value</option>
+                    <option value="PC">Prime Cost</option>
+                  </select>
+                </td>
+
+              <th>Effective Life (Years)</th>
+                <td>
+                    <input id="depLife" type="number">
+                </td>
+
+              <th>Taxable Use %</th>
+                <td>
+                    <input id="depTaxUse" type="number" value="100" min="0" max="100">
+                </td>
+            </tr>
+          </table>
+
+            <button onclick="calcDepreciation()">Calculate</button>
+
+            <div id="depResult"></div>
+          </div>
+        </div>
+  `,
   },
 
   "Fuel Calculation Worksheet": {
@@ -11740,3 +11901,159 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCalculationsList();
 });
 
+/* ============================================================
+   DEPRECIATION - FIRST USE
+   ============================================================ */
+
+function getFYStartYear(date) {
+  const y = date.getFullYear();
+  const m = date.getMonth(); // 0 = Jan, 6 = Jul
+  return m >= 6 ? y : y - 1;
+}
+
+function calcDepreciation() {
+  const cost = parseFloat(document.getElementById("depCost").value);
+  const method = document.getElementById("depMethod").value;
+  const life = parseFloat(document.getElementById("depLife").value);
+
+  const purchase = new Date(document.getElementById("depPurchase").value);
+  const firstTax = new Date(document.getElementById("depFirstTax").value);
+
+  // Taxable Use %
+  const taxableUse =
+    parseFloat(document.getElementById("depTaxUse").value) / 100;
+
+  if (isNaN(cost) || isNaN(life) || isNaN(purchase) || isNaN(firstTax)) {
+    document.getElementById("depResult").innerHTML =
+      "<strong>Please enter all required fields</strong>";
+    return;
+  }
+
+  const rate = method === "DV" ? 200 / life / 100 : 100 / life / 100;
+
+  const purchaseFY = getFYStartYear(purchase);
+  const firstTaxFY = getFYStartYear(firstTax);
+
+  let adjustableValue = cost;
+  let totalClaimed = 0;
+
+  let html = `
+    <table class="depResults">
+      <tr>
+        <th>Date From</th>
+        <th>Date To</th>
+        <th>Days Held</th>
+        <th>Taxable <br> Days</th>
+        <th>Non‑Taxable <br> Days</th>
+        <th>Claimable <br> %</th>
+        <th>Actual <br> DIV</th>
+        <th>Deduction <br>DIV</th>
+        <th>OWDV</th>
+        <th>OAV</th>
+        <th>CWDV</th>
+        <th>CAV</th>
+      </tr>
+  `;
+
+  /* ------------------------------
+     FIRST YEAR (special case)
+     ------------------------------ */
+  let dateFrom = purchase;
+  let dateTo = new Date(purchaseFY + 1, 5, 30); // 30 June of purchase FY
+
+  html += processYear(dateFrom, dateTo);
+
+  /* ------------------------------
+     REMAINING YEARS
+     ------------------------------ */
+  for (let year = purchaseFY + 1; year <= firstTaxFY; year++) {
+    dateFrom = new Date(year, 6, 1); // 1 July
+    dateTo = new Date(year + 1, 5, 30); // 30 June next year
+
+    html += processYear(dateFrom, dateTo);
+  }
+
+  html += "</table>";
+  document.getElementById("depResult").innerHTML = html;
+
+  /* ------------------------------
+     PROCESS YEAR FUNCTION
+     ------------------------------ */
+  function processYear(dateFrom, dateTo) {
+
+    const daysHeld =
+      Math.round((dateTo - dateFrom) / (1000 * 60 * 60 * 24)) + 1;
+
+    // ⭐ Capture OAV BEFORE any calculations
+    const openingAV = adjustableValue;
+
+    const actualDV =
+      method === "DV"
+        ? openingAV * rate * (daysHeld / 365)
+        : cost * rate * (daysHeld / 365);
+
+    const year = getFYStartYear(dateFrom);
+
+    let taxableDays = 0;
+    let nonTaxableDays = 0;
+    let claimablePercent = 0;
+    let deductionDV = 0;
+
+    if (year < firstTaxFY) {
+      taxableDays = 0;
+      nonTaxableDays = daysHeld;
+
+    } else if (year === firstTaxFY) {
+
+      const fyStart = new Date(year, 6, 1);
+      const fyEnd = new Date(year + 1, 5, 30);
+
+      const taxableStart = firstTax < fyStart ? fyStart : firstTax;
+
+      taxableDays =
+        Math.round((fyEnd - taxableStart) / (1000 * 60 * 60 * 24)) + 1;
+
+      nonTaxableDays =
+        Math.round((taxableStart - fyStart) / (1000 * 60 * 60 * 24));
+
+      claimablePercent = (taxableDays / daysHeld) * taxableUse;
+      deductionDV = actualDV * claimablePercent;
+    }
+
+    // ⭐ Correct CAV calculation
+    const closingAV = openingAV - actualDV;
+
+    // CWDV
+    totalClaimed += deductionDV;
+    const closingWDV = cost - totalClaimed;
+
+    // ⭐ Update adjustableValue for next year
+    adjustableValue = closingAV;
+
+    const row = `
+      <tr>
+        <td>${formatDate(dateFrom)}</td>
+        <td>${formatDate(dateTo)}</td>
+        <td>${daysHeld}</td>
+        <td>${taxableDays}</td>
+        <td>${nonTaxableDays}</td>
+        <td>${(claimablePercent * 100).toFixed(0)}</td>
+        <td>${actualDV.toFixed(0)}</td>
+        <td>${deductionDV.toFixed(0)}</td>
+        <td>${cost.toFixed(0)}</td>
+        <td>${openingAV.toFixed(0)}</td>   <!-- ⭐ FIXED -->
+        <td>${closingWDV.toFixed(0)}</td>
+        <td>${closingAV.toFixed(0)}</td>
+      </tr>
+    `;
+
+    return row;
+  }
+}
+
+function formatDate(d) {
+  const day = String(d.getDate()).padStart(2, "0");
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const year = d.getFullYear();
+  return `${day}/${month}/${year}`;
+}

@@ -288,5 +288,265 @@
   box-sizing: border-box;
 }
 
+#depCalc select {
+  height: 40px;
+  font-size: 18px;
+  padding: 5px 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+   Depreciation Calculator – (scoped to #depCalc)
+   ============================================================ */
+
+#depCalc {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Make all table cells equal width */
+#depCalc .depTable {
+  width: 100%;
+  table-layout: fixed; /* forces equal cell widths */
+}
+
+/* Make each cell identical */
+#depCalc .depTable th,
+#depCalc .depTable td {
+  width: 16.66%; /* 6 columns → 100 / 6 */
+  padding: 8px 6px;
+  box-sizing: border-box;
+}
+
+/* Tables */
+#depCalc .depTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+#depCalc th {
+  text-align: left;
+  padding: 8px 6px;
+  font-size: 16px;
+  background: #f2f2f2;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+#depCalc td {
+  padding: 8px 6px;
+}
+
+#depCalc input,
+#depCalc select {
+  width: 100%;
+  height: 42px;
+  font-size: 14px;
+  padding: 5px 36px 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Date field icons */
+#depCalc input[type="date"] {
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="20" viewBox="0 0 24 24" width="20"><path d="M7 10h5v5H7zm6 0h5v5h-5zM7 4h5v5H7zm6 0h5v5h-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+/* Dropdown arrow */
+#depCalc select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="20" viewBox="0 0 24 24" width="20"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+/* Button */
+#depCalc button {
+  margin-top: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  background-color: #ac0046;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+#depCalc button:hover {
+  background-color: #ac0046;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+
+  #depCalc th,
+  #depCalc td {
+    display: block;
+    width: 100%;
+  }
+
+  #depCalc .depTable tr {
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  #depCalc th {
+    margin-top: 10px;
+  }
+}
+
+/* ============================================================
+   Depreciation Results Table (scoped to #depCalc only)
+   ============================================================ */
+
+#depCalc .depResults {
+  width: 100%;
+  table-layout: fixed; /* ⭐ FIX: matches input table width */
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+#depCalc .depResults th,
+#depCalc .depResults td {
+  word-wrap: break-word; /* prevents stretching */
+}
+
+#depCalc .depResults th {
+  background: #f2f2f2;
+  padding: 1px;
+  font-size: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#depCalc .depResults td {
+  padding: 8px 10px;
+  font-size: 13px;
+  border-bottom: 1px solid #eee;
+}
+
+#depCalc .depResults tr:last-child td {
+  border-bottom: none;
+}
 
 
+#depCalc .depTableDesc {
+  width: 100%;
+  table-layout: auto; /* allow flexible sizing for 2‑column layout */
+  border-collapse: collapse;
+  margin-bottom: 12px;
+}
+
+#depCalc .depTableDesc th {
+  width: 180px;             /* fixed label width */
+  background: #f2f2f2;
+  text-align: left;
+  padding: 8px 6px;
+  font-size: 16px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+#depCalc .depTableDesc td {
+  width: auto;              /* input takes remaining space */
+  padding: 8px 6px;
+}
+
+#depCalc .depTableDesc input {
+  width: 100%;
+  height: 42px;             /* same height as other inputs */
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+
+/* ============================================================
+   PRINT STYLES — clean ATO-style printout
+   ============================================================ */
+@media print {
+
+  /* Remove background card */
+  #depCalc {
+    background: white !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Remove buttons */
+  #depCalc button {
+    display: none !important;
+  }
+
+  /* Make tables full width */
+  #depCalc table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+  }
+
+  /* Clean table borders */
+  #depCalc th,
+  #depCalc td {
+    border: 1px solid #000 !important;
+    padding: 6px !important;
+    font-size: 12px !important;
+    background: white !important;
+  }
+
+  /* Header shading for print */
+  #depCalc th {
+    background: #eaeaea !important;
+    font-weight: bold !important;
+  }
+
+  /* Remove rounded corners */
+  #depCalc .depResults,
+  #depCalc .depTable,
+  #depCalc .depTableDesc {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove icons from date fields */
+  #depCalc input[type="date"] {
+    background-image: none !important;
+  }
+
+  /* Inputs print as plain text */
+  #depCalc input,
+  #depCalc select {
+    border: none !important;
+    padding: 0 !important;
+    height: auto !important;
+    font-size: 12px !important;
+  }
+
+  /* Hide empty cells */
+  #depCalc td:empty {
+    display: none !important;
+  }
+}
