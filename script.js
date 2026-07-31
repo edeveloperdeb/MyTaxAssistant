@@ -10900,7 +10900,7 @@ const calculations = {
   `,
   },
 
-  "Days Between Dates": {
+  "Days Between Dates / Days of the Year": {
     aliases: ["days", "date difference", "between dates"],
     items: [
       "Calculate the number of days between two dates. This calculator requires you to:<p>⭐Enter a start date</p><p>⭐Enter an end date</p><p>⭐Click <strong>Calculate</strong></p>   ",
