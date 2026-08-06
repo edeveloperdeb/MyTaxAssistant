@@ -10547,16 +10547,16 @@ const rates = {
                     <table style="width:100%; border-collapse:collapse; font-size:15px; text-align:center;">
                       <thead>
                         <tr style="background:#008427; color:#ffffff;font-size:12px;">
-                          <th style="border:1px solid #ccc; padding:6px;">Pensioner Code Letter</th>
+                          <th style="border:1px solid #ccc; padding:6px;">Pensioner Code Letter / Description</th>
                           <th style="border:1px solid #ccc; padding:6px;">Taxpayer may get up to the full Tax Offset<br> if their rebate income is equal to or less than this amount</th>
                           <th style="border:1px solid #ccc; padding:6px;">Taxpayer will not get a Tax Offset <br>if their rebate income is equal to or more than this amount</th>
                           <th style="border:1px solid #ccc; padding:6px;">Maximum Tax Offset</th>
                         </tr>
                       </thead>
                             <tbody>
-                              <tr><td style="border:1px solid #ccc; padding:6px;">A</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$34,919</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$52,759</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$2,230</td></tr>
-                              <tr><td style="border:1px solid #ccc; padding:6px;">B, C</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$30,994</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$43,810</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$1,602</td></tr>
-                              <tr><td style="border:1px solid #ccc; padding:6px;">D, E</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$33,732</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$50,052</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$2,040</td></tr>
+                              <tr><td style="border:1px solid #ccc; padding:6px;"><strong>A</strong> - Single, Separated or Widowed</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$34,919</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$52,759</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$2,230</td></tr>
+                              <tr><td style="border:1px solid #ccc; padding:6px;"><strong>D, E</strong> - Each partner of a couple</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$30,994</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$43,810</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$1,602</td></tr>
+                              <tr><td style="border:1px solid #ccc; padding:6px;"><strong>B, C</strong> - Each partner of an illness seperated couple</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$33,732</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$50,052</td><td style="border:1px solid #ccc; padding:6px; text-align:center;">$2,040</td></tr>
                           </tbody>
                           </table>
                 </div>
@@ -11123,6 +11123,9 @@ const calculations = {
   </div>
 `,
   },
+
+
+
 
   Telephone: {
     aliases: ["telephone", "phone", "mobile"],
